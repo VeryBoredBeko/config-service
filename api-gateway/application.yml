@@ -7,9 +7,13 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      default-filters:
-        - StripPrefix=1
-        
+      routes:
+        - id: dynamic-route
+          uri: lb://{service-id}
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=/(?<path>.*), /${path}
 eureka:
   client:
     service-url:
