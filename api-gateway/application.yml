@@ -7,13 +7,6 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: dynamic-route
-          uri: lb://{service-id}
-          predicates:
-            - Path=/**
-          filters:
-            - RewritePath=/(?<path>.*), /${path}
 eureka:
   client:
     service-url:
