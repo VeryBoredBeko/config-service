@@ -1,26 +1,13 @@
 server:
   port: 8767
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          keycloak:
-            client-id: api-gateway-client
-            client-secret: PIxVZhY42eTeUpc0WWXNuL8zOm2lj0jW
-            scope: openid,profile,email
-            redirect-uri: http://localhost:8767/login/oauth2/code/keycloak
-        provider:
-          keycloak:
-            issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-        default-filters:
-          - TokenRelay
+
 eureka:
   client:
     service-url:
