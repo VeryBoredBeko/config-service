@@ -1,12 +1,19 @@
 server:
   port: 8767
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
+        default-filters:
+          - TokenRelay
 eureka:
   client:
     service-url:
