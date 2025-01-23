@@ -6,6 +6,16 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
+      client:
+        registration:
+          keycloak:
+            client-id: spring-boot-microservices-realm
+            client-secret: V7LPDrEIrfdBHgFjeOvOEM9STPKTaNJJ
+            scope: openid
+            redirect-uri: http://localhost:8767/login/oauth2/code/keycloak
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
   cloud:
     gateway:
       discovery:
