@@ -1,5 +1,10 @@
 server:
   port: 8091
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
 eureka:
   client:
     service-url:
