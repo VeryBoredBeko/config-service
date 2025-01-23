@@ -4,7 +4,8 @@ spring:
   security:
     oauth2:
       resourceserver:
-        issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
+        jwt:
+          issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
 eureka:
   client:
     service-url:
