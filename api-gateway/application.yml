@@ -9,7 +9,7 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: boreebeko
+            client-id: gateway-client
             client-secret: V7LPDrEIrfdBHgFjeOvOEM9STPKTaNJJ
             scope: openid
             redirect-uri: http://localhost:8767/login/oauth2/code/keycloak
