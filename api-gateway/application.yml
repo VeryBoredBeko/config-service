@@ -3,9 +3,9 @@ server:
 spring:
   security:
     oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
+      # resourceserver:
+      #   jwt:
+      #     issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
       client:
         registration:
           keycloak:
