@@ -10,3 +10,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8766/eureka/
+minio:
+  bucket: images
+  url: http://localhost:9001
+  accessKey: minioadmin
+  secretKey: minioadmin
+  
