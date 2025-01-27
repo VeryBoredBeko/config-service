@@ -6,6 +6,11 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
+  kafka:
+    producer:
+      bootstrap-servers: http://localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 eureka:
   client:
     service-url:
