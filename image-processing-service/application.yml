@@ -12,9 +12,9 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   datasource:
-    url: jdbc:postgresql://localhost:5432/image-processing-service
+    url: jdbc:postgresql://localhost:5432/image-processing-service-db
     username: postgres
-    password: postgres
+    password: admin
   jpa:
     properties:
       hibernate:
