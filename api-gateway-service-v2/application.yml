@@ -15,6 +15,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+          service-id-prefix: false
       default-filters:
         - name: CircuitBreaker
           args:
