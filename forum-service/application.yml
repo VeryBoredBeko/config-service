@@ -6,6 +6,15 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:8080/realms/spring-boot-microservices-realm
+  datasource:
+    url: jdbc:postgresql://localhost:5432/forum-service
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    format-sql: true
 eureka:
   client:
     service-url:
