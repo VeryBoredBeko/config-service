@@ -60,3 +60,9 @@ resilience4j:
       default:
         max-attempts: 3
         wait-duration: "2s"
+  ratelimiter:
+    instances:
+      image-service:
+        limitForPeriod: 10
+        limitRefreshPeriod: "60s"
+        
