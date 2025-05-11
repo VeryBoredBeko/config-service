@@ -23,7 +23,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8766/eureka/
+      defaultZone: http://client:12345@localhost:8766/eureka/
 
 # Actuator endpoints
 management:
