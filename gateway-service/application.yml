@@ -24,8 +24,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8766/eureka/
-    register-with-eureka: true
-    fetch-registry: true
 
 # Actuator endpoints
 management:
